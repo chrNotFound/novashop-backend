@@ -1,0 +1,9 @@
+package com.novashop.novashop_backend.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public record CategoriaRequest(
+        @NotBlank(message = "Ingresa el nombre de la categoría.")
+        @Size(min = 3, max = 60, message = "El nombre debe tener entre 3 y 60 caracteres.") String nombre) {
+}
